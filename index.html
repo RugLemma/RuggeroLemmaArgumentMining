@@ -1,0 +1,143 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mining Data</title>
+
+<link rel="stylesheet" href="https://cdn.metroui.org.ua/v4/css/metro.min.css">
+<link rel="stylesheet" href="https://cdn.metroui.org.ua/v4/css/metro-colors.min.css">
+<link rel="stylesheet" href="https://cdn.metroui.org.ua/v4/css/metro-rtl.min.css">
+<link rel="stylesheet" href="https://cdn.metroui.org.ua/v4/css/metro-icons.min.css">
+<link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<main>
+
+    <section class="text-center">
+        <div class="container">
+            <h1 class="jumbotron-heading">Visualizing Argument Mining Data</h1>
+        </div>
+    </section>
+
+    <p style="z-index:10; position:fixed;" id="descriptionMouse"></p>
+<!--FIRST  -->
+    <section>
+        <div class="container">
+            <h2>Dataset 1: Debatepedia and ProCon</h2>
+            <p>This section shows the graph visualization of argument data and the relationships between arguments.Point the mouse arrow on the node to see the sentences linked with that node.</p>
+            <div >
+                    <button class="topic" type="button">Abortion</button>
+                    <button class="topic" type="button">Arminglibianrebels</button>
+                    <button class="topic" type="button">Cellphones</button>
+                    <button class="topic" type="button">Childbeautycontests</button>
+                    <button class="topic" type="button">Chinaonechildpolicy</button>
+                    <button class="topic" type="button">Cocanarcotic</button>
+                    <button class="topic" type="button">Gasvehicles</button>
+                    <button class="topic" type="button">Gaymarriage</button>
+                    <button class="topic" type="button">Groundzeromosque</button>
+                    <button class="topic" type="button">Internetaccess</button>
+                    <button class="topic" type="button">Marijuanafree</button>
+                    <button class="topic" type="button">Militaryservice</button>
+                    <button class="topic" type="button">Noflyzone</button>
+                    <button class="topic" type="button">Obesity</button>
+                    <button class="topic" type="button">Osamaphoto</button>
+                    <button class="topic" type="button">Privatizingsocialsecurity</button>
+                    <button class="topic" type="button">Securityprofiling</button>
+                    <button class="topic" type="button">Sobrietytest</button>
+                    <button class="topic" type="button">Solarenergy</button>
+                    <button class="topic" type="button">Sobrietytest</button>
+                    <button class="topic" type="button">Tablet</button>
+                    <button class="topic" type="button">Vegetarianism</button>
+                    <button class="topic" type="button">Violentgames</button>
+            </div>
+
+            <div class="riquadro">
+                <h5>Graph for topic: </h5>
+                <h6 id="grafo-topic"></h6>
+                <div id="grafo">
+                </div>
+                <span id="entailment">Entailment </span>
+                <span id="non-entailment">Non-entailment </span><br>
+                <span >Zoom in and zoom out avaible on the graph </span>
+
+            </div>
+            <br>
+        </div>
+    </section>
+    
+        <section>
+        <div class="container">
+            <h2>Dataset 3: Annotated Speeches</h2>
+            <div>
+
+                <div class="riquadro">
+                    <h5>Annotated speech with color</h5>
+                    Press one of these botton to see the speech:
+                    <br>
+                    <button id="discorso1">Load Cameron</button>
+                    <button id="discorso2">Load Clegg</button>
+                    <button id="discorso3">Load Miliband</button>
+                    <button id="pulisci">Remove text</button>
+                    <p id="discorso_sottolineato"></p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    
+    <section id="annotated-essays">
+        <div class="container">
+            <h2>Dataset 2: Annotated Essays</h2>
+            <div>
+                    <div  id="arguments">
+                        <!--Here I add the button with jQuery because are a lot-->
+                    </div>
+                    
+                <br>
+                <div class="riquadro">
+                    
+                        <h5>Graph for topic: </h5> 
+                        <h6 id="grafo-essay"></h6>
+                        <div id="grafo2"></div>
+                        <span id="majorclaim">MajorClaim </span>
+                        <span id="claim">Claim </span>
+                        <span id="premise">Premise</span><br>
+                        <span >Zoom in and zoom out avaible on the graph </span>
+                        <br>
+                        <span id="entailment">Entailment </span>
+                        <span id="non-entailment">Non-entailment </span><br>
+                      
+                        <h5>Annotated essay: </h5> <button><a id="reload-text">Show text</a></button>
+                        
+                        <p id="annotated-text"></p>
+                    
+                </div>
+               
+            </div>
+
+        </div>
+    </section>
+
+
+</main>
+
+
+
+<!-- version compatible with jsnetworkx -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.js"></script>
+<script src="jsnetworkx.js"></script>
+
+<script
+        src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
+        integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+        crossorigin="anonymous"></script>
+
+<script src="main.js"></script>
+</body>
+</html>

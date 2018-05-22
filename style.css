@@ -1,0 +1,78 @@
+.riquadro {
+
+    width: 600px;
+    background-color: #e9ecef;
+    margin: auto;
+    /*padding: 150px;*/
+
+}
+
+
+#grafo  {
+    height: 500px;
+    font-weight: 600;
+    
+}
+
+#grafo2{
+    height: 500px;
+    font-weight: 600;
+    
+}
+
+.nodo {
+
+    font-size: 2px;
+
+}
+/*
+main{
+    background-color: #f4f8fc;
+}*/
+/*
+#desc{
+    min-height: 100px;
+}
+*/
+
+/*
+#desc-2{
+    min-height: 40px;
+}
+*/
+#non-entailment{
+    background-color: black;
+    color: white;
+}
+#entailment{
+    background-color: orange;
+}
+#majorclaim{
+    background-color: red;
+}
+#claim{
+    background-color: yellow;
+}
+#premise{
+    background-color: lawngreen;
+}
+/*
+#lab-3{
+   width: 100%;
+}*/
+/*
+.lab-2-floats{
+    width: 100%;
+}
+*/
+
+/*
+#lab-2{
+    width: 100%;
+}
+*/
+#descriptionMouse{
+    background-color: lightyellow;
+    max-width: 250px;
+
+}
